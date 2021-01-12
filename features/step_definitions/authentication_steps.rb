@@ -13,7 +13,7 @@ When("I fill in the sign up form") do
 end
 
 Then("should see that my account is confirmed") do
-  message = "You have been successfully registered"
+  message = "You have signed up successfully"
   expect(page).to have_content(message)
 end
 
@@ -30,7 +30,7 @@ When("I fill in the login form") do
 end
 
 Then("I should be logged in") do
-  expect(page).to have_content("Logged in")
+  expect(page).to have_content("Signed in successfully")
 end
 
 Given("I am logged in") do

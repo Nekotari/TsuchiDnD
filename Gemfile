@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails'
+gem 'devise'
+gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
+gem 'cancancan'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -48,6 +51,8 @@ group :development do
 end
 
 group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'

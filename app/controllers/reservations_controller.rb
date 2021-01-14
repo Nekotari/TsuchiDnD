@@ -22,6 +22,10 @@ class ReservationsController < ApplicationController
     redirect_to room
   end
 
+  def guests_reservations
+    @guests_reservations = current_user.reservations.order(check_in: :asc)
+  end
+
   private
 
   def reservation_params

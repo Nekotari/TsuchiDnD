@@ -11,4 +11,6 @@ Rails.application.routes.draw do
     end
     resources :reservations, only: [:create]
   end
+
+  get '/guests_reservations' => 'reservations#guests_reservations'
 end

@@ -1,2 +1,34 @@
-<h1>Room#index</h1>
-<p>Find me in app/views/room/index.html.erb</p>
+<div class="row">
+
+  <!-- LEFT PANEL -->
+  <div class="col-md-8">
+
+    <!-- Listing Name -->
+    <div class="row">
+      <div class="col-md-8">
+        <h1><%= @room.property_type %></h1>
+        <%= "#{@room.country} #{@room.city} #{@room.detailed_address}" %>
+      </div>
+      <div class="col-md-4 text-center">
+        <%= @room.user.email %>
+      </div>
+    </div>
+    <hr/>
+
+    <!-- About -->
+    <div class="row">
+      <div class="col-md-12">
+        <h3>About</h3>
+        <p><%= @room.description %></p>
+      </div>
+    </div>
+    <hr/>
+  </div>
+
+
+  <!-- RIGHT PANEL -->
+  <div class="col-md-4">
+    <!-- Reservation Form -->
+    <%#= render 'reservations/form' %>
+  </div>
+</div>

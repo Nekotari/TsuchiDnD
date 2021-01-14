@@ -1,2 +1,38 @@
-<h1>Room#new</h1>
-<p>Find me in app/views/room/new.html.erb</p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Add your property
+  </div>
+  <div class="panel-body">
+    <div class="container">
+
+      <%= form_for @room do |f| %>
+        <div class="row">
+          <div class="col-md-4 select">
+            <div class="form-group">
+              <label>Type</label>
+              <%= f.select :property_type, [["Apartment", "Apartment"], ["House", "House"], ["Bed", "Bed"]],
+                           id: "property_type", prompt: "Select...", class: "form-control" %>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="form-group">
+              <label>Country</label>
+              <%= f.text_field :country, placeholder: "Japan", class: "form-control", required: true %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label>City</label>
+              <%= f.text_field :city, placeholder: "Tokyo", class: "form-control", required: true %>
+            </div>
+          </div>
+          <div><%= f.submit "Create My Room", class: "btn btn-normal" %></div>
+
+      <% end %>
+
+    </div>
+  </div>
+</div>

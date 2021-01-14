@@ -9,6 +9,6 @@ Rails.application.routes.draw do
       get 'description'
       get 'location'
     end
+    resources :reservations, only: [:create]
   end
-  resources :reservations, only: [:create]
 end

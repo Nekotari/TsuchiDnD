@@ -30,6 +30,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
 gem 'cancancan'
+gem 'jquery-ui-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
